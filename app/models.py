@@ -1,3 +1,4 @@
+#SQLAlchemy Models (like Django's models.py)
 from sqlalchemy import null
 from sqlalchemy import Column
 from sqlalchemy import column,Integer,String,Float,Boolean
