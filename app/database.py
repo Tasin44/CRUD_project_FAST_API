@@ -44,6 +44,17 @@ The get_db function is a dependency that FastAPI will automatically call
 for any route that needs a database session.
 '''
 def get_db():
+    '''
+    Request
+        ↓
+    create DB session
+        ↓
+    give it to endpoint
+        ↓
+    endpoint finishes
+       ↓
+    close DB session
+    '''
     db=SessionLocal()#Creates a fresh, new database session for the current request.
     try:
         yield db #Pauses the function and hands the db session to the FastAPI route to use.
